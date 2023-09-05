@@ -2,7 +2,6 @@ public class Operator {
   public static void main(String[] args) {
     // + - *
     // ++
-
     // --
     int i = 0;
     i = i - 1; // -1
@@ -56,6 +55,7 @@ public class Operator {
     // !
     boolean b9 = !false;
     int h = (1 + 2) * 10; // 30
+    System.out.println("b9= " + b9);
     boolean b10 = !(true && false); // true
     
     /// int h2 = [10 - (1 + 3)] + 4;
