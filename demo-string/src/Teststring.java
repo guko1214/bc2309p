@@ -32,6 +32,6 @@ public class Teststring {
     // convert int 32000 to short 32000
     // assign short 32000 to 1
     short s1 = 32000;
-
+    
   }
 }

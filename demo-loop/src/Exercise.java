@@ -83,7 +83,25 @@ public class Exercise {
     }
     System.out.println("sum7 is " + sum7);
 
-    
-
+    // 1 - 1000
+    // for odd numbers, add itself multipled by 3
+    // for even numbers, add all numbers can be divided by 5
+    // for other numbers not mentioned above two cases, 
+    // add itself if it can be divided by 2, otherwise add itself divided by 2 
+    int sum8 = 0;
+    for (int i = 1; i <= 1000; i++) {
+      if (i % 2 != 0) {
+        sum8 += i * 3;
+      } else if (i % 2 ==0 && i % 5 == 0) {
+        sum8 += i;
+      } else {
+        if (i % 2 == 0) {
+            sum8 += i;
+        } else {
+          sum8 += i / 2;
+        }
+      }
+    }
+    System.out.println("sum8 is " + sum8);
   }  
 }
