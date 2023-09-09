@@ -118,13 +118,11 @@ public class TestNestedLoop {
       for (int j= 11; j <= 20; j++) { // inner loop
         // if (i % 2 == 0 && j % 2 == 0 && j < 15) {
         if (j < 15 && i % 2 == 0 && j % 2 == 0) { // if j < 15 written first, the remaining conditional will not run; thus faster          
-          // This approach is slower, since j loop through the end
+          // but this approach is slower than whose with separate ifelse break before this conditional , since j loop through the end
             System.out.println("i=" + i + ", j=" + j);                    
         }        
       }
     }
-
-
     
   }
 }
