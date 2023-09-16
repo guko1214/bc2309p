@@ -89,6 +89,9 @@ public class Testswitch {
     }
     System.out.println("The grade is " + grade);
 
+    // switch cannot set condition for not only one target, e.g. score > 90
+
+
     // Alternative
     if (score >= 90) {
       grade = 'A';

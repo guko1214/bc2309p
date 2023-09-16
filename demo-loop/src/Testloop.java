@@ -36,5 +36,18 @@ public class Testloop {
     }
     System.out.println(x); // 256
     
+    for (byte b = 0; b < 128; b++) {
+      // for loop; b++ then check condition
+      System.out.println(b); // 0 .. 127
+      // when b = 127 -> b++ -> since overflow -128 -> -128 < 128 ???
+      // it will loop forever!!! i.e. infinite loop
+    }
+
+    for (byte b = 0; b >= 0; b++) {
+      System.out.println(b);
+      // when b = 127 -> b++ -> -128 -> -128 >= 0 ?
+      // it will loop to 127, then stop
+    }
+
   }
 }
