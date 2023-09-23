@@ -96,12 +96,12 @@ public class Person {
 
     Person person2 = new Person();
     person2.setAge(73);
-    person2.setGender('F');
+    person2.setGender('M');
     if (person.isElderly() && !person.isMale()) {
       System.out.println("this is female elderly");
     }
-    if (person2.isElderly() && !person2.isMale()) {
-      System.out.println("this is female elderly");
+    if (person2.isElderly() && person2.isMale()) {
+      System.out.println("this is male elderly");
     }
 
     System.out.println(person.isElderlyStr());
