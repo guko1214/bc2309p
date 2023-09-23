@@ -96,9 +96,12 @@ public class Computer {
 
   public String getDescription() {
     String des;
-    des = "This is a " + this.type + " with "  + this.cpu + " cpu and ";
-    des += this.memorySize + "GB ram. The monitor has ";
-    des += this.getResolution() + " resolution";
+    // des = "This is a " + this.type + " with "  + this.cpu + " cpu and ";
+    // des += this.memorySize + "GB ram. The monitor has ";
+    // des += this.getResolution() + " resolution";
+    des = "This is a " + this.type + " with "  + this.cpu + " cpu and "
+      + this.memorySize + "GB ram. The monitor has "
+      + this.getResolution() + " resolution";
     if (this.isTorchMon()) {
       des += " with touch screen.";
     } else {
