@@ -3,14 +3,23 @@ public class Inventory {
   // primitives, wrapper class, String
   Stock[] stocks;
 
+  static String location = "TST";
+
+  static String type = "liquid";
+
+  // Constructor signature 1 (with Stock parameter)
+  public Inventory(Stock stock) {
+    this.stocks = new Stock[100];
+    this.stocks[0] = stock;
+    //this.location = loc ation;
+  }
+
+  // Constructor signature 2 () (no parameter)
   public Inventory() {
     this.stocks = new Stock[100];
   }
 
-  public Inventory(Stock stock) {
-    this.stocks = new Stock[100];
-    this.stocks[0] = stock;
-  }
+
 
   public void add(Stock stock) {
     for (int i = 0; i < this.stocks.length; i++){
@@ -20,6 +29,10 @@ public class Inventory {
       }
     }
   }
+
+  // public void setlocation(String location) {
+  //   this.location = location;
+  // }
 
   public Stock[] getstock() {
     return this.stocks;
@@ -140,11 +153,15 @@ public class Inventory {
 
     inventory.printstocksprice();
 
-    System.out.println("no. of stock in inventory =" + inventory.size());
+    System.out.println("no. of stock in inventory=" + inventory.size());
 
     inventory.clearstocks();
 
-    System.out.println("no. of stock in inventory =" + inventory.size());
+    System.out.println("no. of stock in inventory=" + inventory.size());
+
+    System.out.println(Inventory.location);
+
+
   }
 
 
