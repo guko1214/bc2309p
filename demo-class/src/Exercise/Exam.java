@@ -11,11 +11,16 @@ package Exercise;
 
 public class Exam {
 
-  Subject[] subjects;
+  // Access Modifier: public, private, protected, package-private (default)
+  // public -> class, attribute, method, constructor
+  // private -> attribute, method, constructor
+  // protected -> attribute, method, constructor
+  // package-private -> class, attribute, method, constructor
+  private Subject[] subjects;
 
   private static int size = 0;
 
-  static final int  noOfdayOfweek = 7; 
+  private static final int noOfdayOfweek = 7; // Camel Case
 
   public Exam() {
     this.subjects = new Subject[100];
@@ -48,6 +53,21 @@ public class Exam {
         break;
       }
     }
+  }
+
+  public boolean delete(Subject subject) {
+    subjects = this.getsubjects();
+    for (int i = 0; i < subjects.length; i++) {
+      if (subjects[i] != null //
+        && subject != null //
+        && subjects[i].getdescription()
+        .equals(subject.getdescription())) {
+        this.subjects[i] = null;
+        size--;
+        return true;
+      }
+    }
+    return false;
   }
 
   public Subject[] getsubjects() {
@@ -90,53 +110,19 @@ public class Exam {
     return highestsubject;
   }
 
-  public static void main(String[] args) {
-    
-    Exam exam = new Exam();
-
-    System.out.println("1no of subjects=" + size);
-
-    exam.addsubject1("Chi", 53);
-    Subject subject1 = new Subject("Eng", 40);
-    exam.addsubject2(subject1);
-    exam.addsubject2(new Subject("Math", 80));
-    exam.addsubject1("Phy", 60);
-    exam.addsubject1("Chem", 70);
-    exam.addsubject1("Bio", 55);
-    
-    System.out.println(exam.averagescore());
-
-    System.out.println("2no of subjects=" + exam.size());
-  
-    for (int i = 0; i < exam.getsubjects().length; i++) {
-      Subject s = exam.getsubjects()[i];
-      if (s != null) {
-        System.out.println(s.getdescription() + "=" + s.getscore());
-      }
-    }
-
-    System.out.println("no of subjects=" + Exam.size);
-
-    Exam exam2 = new Exam();
-    Subject subject7 = new Subject("History", 85);
-    Subject subject8 = new Subject("Arts", 35);
-    exam2.addsubject2(subject7);
-    exam2.addsubject2(subject8);
-
-    System.out.println("no of subjects=" + Exam.size);
-
-    // private static variable
-    // so, we cannot get the static variable
-    // only when the the main is not wrote in the same class file
-    // if wrote in the same file, the private variable can still be accessed
-    System.out.println("no of subjects=" + getsize());
-
-    System.out.println("The subject get the highest score is " + exam.highestscoresubject());
-
-  }
-
   public static int getsize() {
     return size;
+  }
+
+  public static int getNoOfDayOfWeek() {
+    return noOfdayOfweek;
+  }
+
+
+  public static void main(String[] args) {
+    System.out.println(noOfdayOfweek);
+    System.out.println(getNoOfDayOfWeek());
+
   }
 
 }
