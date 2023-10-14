@@ -4,14 +4,17 @@ public class Dog extends Animal {
   
   private String name;
 
+  private boolean proboscis;
+
   public Dog() {
 
   }
 
-  public Dog(double weight, double height,String sex, String name) {
-    super(weight, height, sex); // super() must be the first in constructor
+  public Dog(double weight, double height, String color,
+            String sex, String name, boolean proboscis ) {
+    super(weight, height, color, sex); // super() must be the first in constructor
     this.name = name;
-    
+    this.proboscis = true;    
   }
 
   public String sound() {
@@ -26,13 +29,14 @@ public class Dog extends Animal {
     //return "weight=" + super.getWeight() + ", height=" + super.getHeight()
     //+ ", name=" + this.name;
     // this is usual way to describe when a class is inherited from a parent class
-    return "Dog(name=" + this.name + ", Animal(" + super.toString() + "))"; 
+    return "Dog(name=" + this.name + ", proboscis=" + this.proboscis + 
+            ", Animal(" + super.toString() + "))"; 
   }
 
   public static void main(String[] args) {
     
     Dog dog = new Dog();
-    Dog dog2 = new Dog(12.0d, 13.0d,"Male","MoMo");
+    Dog dog2 = new Dog(12.0d, 13.0d,"white","Male","MoMo", false);
 
     System.out.println(dog.getWeight());
     System.out.println(dog.getHeight());

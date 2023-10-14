@@ -27,7 +27,7 @@ public class IntegerTest {
     Long l1 = 3L; // auto-box
     Long l2 = Long.valueOf(3); // upcast int -> long -> Long
 
-    //Short s1 = Short.valueOf(3); this is down cast, is not allowed
+    //Short s1 = Short.valueOf(3); this is down case, is not allowed
     Short s1 = Short.valueOf("3"); 
     Short s2 = Short.valueOf((short) 3);
 
