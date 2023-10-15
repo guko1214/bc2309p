@@ -9,13 +9,13 @@ public class App {
 
     // Conversion between primitives and Wrapper Class
     short s1 = 10; 
-    int i1 = s1; // upcast
+    int i1 = s1; // upcase
     Integer i11 = i1; // auto-box
     int i2 = i11; // un-box
     
     // error, cannot assign short variable to Integer directly
     // Integer i12 = s1; 
-    Integer i12 = (int) s1; // short (cast) -> int (auto-box) -> Integer
+    Integer i12 = (int) s1; // short (case) -> int (auto-box) -> Integer
 
     boolean b1 = true;
     Boolean b11 = b1; // auto-box

@@ -2,7 +2,7 @@ public class Employee {
   
   private String name;
 
-  public static final int HOUR_PER_DAY = 24; // often constant value wrote in uppper cast
+  public static final int HOUR_PER_DAY = 24; // often constant value wrote in uppper case
 
   public static final double PI = Math.PI;
 

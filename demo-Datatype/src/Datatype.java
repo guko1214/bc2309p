@@ -139,7 +139,7 @@ public class Datatype {
     byte b3 = 3; 
     short s3 = 4;
     int i3 = 5; // default int value
-    long i4 = 5; // (upcast), you can ignore today
+    long i4 = 5; // (upcase), you can ignore today
     long l3 = 5L; // Assign long value 5 to a long variable
 
 
