@@ -6,4 +6,9 @@ public class Hp {
   public void setHpValue(int hpValue) {
     this.hpValue = hpValue;
   }
+
+  public int getValue() {
+    return this.hpValue;
+  }
+  
 }
