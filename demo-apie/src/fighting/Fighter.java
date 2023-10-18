@@ -4,6 +4,7 @@ public interface Fighter {
 
 void fight();
 
-void bleed();
+void bleed(Fighter fighter);
+
 
 }
