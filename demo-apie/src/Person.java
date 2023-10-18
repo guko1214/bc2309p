@@ -29,7 +29,7 @@ public class Person { // Parent Class
   public void setAge (int age) {
     this.age = age;
   }
-
+ 
   public String getName () {
     return this.name;
   }
@@ -38,6 +38,7 @@ public class Person { // Parent Class
     return this.age;
   }
 
+  @Override // Overriding the toString() method in Object.class
   public String toString() {
     return "name=" + this.name  //
         + ", age=" + this.age;

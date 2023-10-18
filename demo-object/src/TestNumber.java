@@ -25,7 +25,6 @@ public class TestNumber {
       Float float2 = (Float) n;
       System.out.println(float2.floatValue());
     }
-
     
   }
 
