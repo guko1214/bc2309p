@@ -6,7 +6,7 @@ public class Human implements Fighter {
 
   }
 
-  public void bleed() {
+  public void bleed(Fighter fighter) {
     
   }
 

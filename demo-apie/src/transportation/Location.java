@@ -1,6 +1,7 @@
 package transportation;
 
 public class Location {
+  // 封裝 outside Bus, Taxi
   
   private int x; // 1 -> 10
 

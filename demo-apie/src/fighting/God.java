@@ -15,7 +15,7 @@ public class God implements Fighter {
 
   }
 
-  public void bleed() {
+  public void bleed(Fighter fighter) {
     
   }
 
