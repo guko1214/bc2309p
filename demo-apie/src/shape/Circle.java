@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class Circle extends Shape {
   
-  private double radius;
+  private double radius; 
 
   public Circle() {
 
@@ -16,6 +16,7 @@ public class Circle extends Shape {
     this.radius = radius;
   }
 
+  // // getter, setter
   public void setRadius(double radius) {
     this.radius = radius;
   }

@@ -111,6 +111,7 @@ public class Bird { // implicitly extend Object.class
       System.out.println(d.doubleValue());
     }
 
+    object = new int[5][1];
 
     Bird bird2 = new Bird("bird2");
     System.out.println(bird2.toString());
