@@ -58,8 +58,8 @@ public class StringBox {
     }
     // this.arr (object reference -> char[] "sample")
     // newArr (object reference -> char[] "samplesample")
-    this.arr = newArr; // 
-    return this; // alter the original object
+    this.arr = newArr; // alter the original object
+    return this; // return the original modified object
   }
 
 
