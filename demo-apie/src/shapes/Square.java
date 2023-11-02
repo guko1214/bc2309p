@@ -1,8 +1,9 @@
-package shape;
+package shapes;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Objects;
+import enums.Color;
 
 public class Square extends Shape {
     
@@ -12,7 +13,8 @@ public class Square extends Shape {
 
     }
 
-    public Square(double length) {
+    public Square(double length, Color color) {
+        super(color);
         this.length = length;
     }
 
@@ -24,21 +26,26 @@ public class Square extends Shape {
         return this.length;
     }
 
+    @Override
     public int hashCode() {
         return Objects.hash(this.length,this.length);
     }
 
+    @Override
     public boolean equals(Object obj) {
         if (this == obj)
             return true;
         if (!(obj instanceof Square))
             return false;
         Square square = (Square) obj;
-        return Objects.equals(this.length,square.length);            
-    } 
+        //return Objects.equals(this.length,square.length);
+        return Objects.equals(this.length,square.length) && Objects.equals(this.getColor(),square.getColor());
+    }
 
+
+    @Override
     public String toString() {
-        return "Square(length=" + this.length +  ", Shape())";
+        return "Square(length=" + this.length +  ", Shape(color=" + super.getColor() + "))";
     }
 
     public double area(RoundingMode mode, int dp) {
@@ -46,8 +53,11 @@ public class Square extends Shape {
     }
 
     public static void main(String[] args) {
-        Square square = new Square(4.6989d);
+
+        Square square = new Square(4.6989d, Color.WHITE);
+        System.out.println(square.toString());
         System.out.println(square.area(RoundingMode.HALF_UP,2));
+
     }
 
 }

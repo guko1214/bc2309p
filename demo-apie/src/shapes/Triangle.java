@@ -1,4 +1,4 @@
-package shape;
+package shapes;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

@@ -51,7 +51,7 @@ public class Box {
     for (Color color: Color.values()) { // Color[]
       System.out.println(color.name() + "'s code=" + color.getCode() + ", description=" + color.getDescription());
     }
-    // valueOf()
+    // valueOf(), from string to enum
     System.out.println(Color.valueOf("WHITE")); // from string to enum
 
     System.out.println(Color.findEnumByCode('W').equals(Color.valueOf("WHITE")));
