@@ -7,6 +7,7 @@ public enum Color { // class
   WHITE('W', "White"),
   BLACK('B', "Black"),
   BLUE('U', "Blue"),
+  YELLOW('Y',"Yellow")
   ;
 
   private char code;

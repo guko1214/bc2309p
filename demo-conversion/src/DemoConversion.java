@@ -1,10 +1,10 @@
 public class DemoConversion{
   public static void main(String[] args) {
     // Primitives
-    // upcase (promotion)
+    // upcast (promotion)
     // byte -> short -> int -> long (Integer)
     byte b = 10;
-    short s = b; // upcase: from byte to short
+    short s = b; // upcast: from byte to short
     // byte b2 = s; // error
     int i = s;
     long l = i;
@@ -12,19 +12,19 @@ public class DemoConversion{
 
     // float -> double
     float f = 12.323f;
-    double d = f; // upcase
+    double d = f; // upcast
 
     // char -> int
     char c = 'a'; // in ascii 97
-    int w = c; // upcase
+    int w = c; // upcast
     System.out.println(w); // 97
     // char c2 = w; // int // error // int 32 bit -> char 16 bit , int range larger than char
     // only shorter range datatype can convert to longer range data range
     // e.g. byte -> short, short - int, but not short -> byte
 
-    // downcase
+    // downcast
     short s3 = 127;
-    byte b3 = (byte) s3; // 強行去downcase
+    byte b3 = (byte) s3; // 強行去downcast
     System.out.println(b3); // 127
 
     short s4 = 30000;
@@ -62,6 +62,8 @@ public class DemoConversion{
       System.out.println("s9 > b9");
     }
 
+    // int -> double
+    int intToDouble = (int) d;
 
 
   }

@@ -9,7 +9,7 @@ public class App {
 
     // Conversion between primitives and Wrapper Class
     short s1 = 10; 
-    int i1 = s1; // upcase
+    int i1 = s1; // upcast
     Integer i11 = i1; // auto-box
     int i2 = i11; // un-box
     

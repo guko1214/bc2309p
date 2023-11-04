@@ -93,7 +93,7 @@ public class Bird { // implicitly extend Object.class
     System.out.println(object.getClass()); // class Bird
     //object.fly()
     if (object instanceof Bird) { //
-      // downcase from Object.class to Bird.class
+      // downcast from Object.class to Bird.class
       Bird b = (Bird) object;
       //object = (Bird) object;
       //object.fly();

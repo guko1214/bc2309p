@@ -25,9 +25,9 @@ public class IntegerTest {
     Integer i8 = Integer.valueOf(8); // i8 will resue the object of i7
 
     Long l1 = 3L; // auto-box
-    Long l2 = Long.valueOf(3); // upcase int -> long -> Long
+    Long l2 = Long.valueOf(3); // upcast int -> long -> Long
 
-    //Short s1 = Short.valueOf(3); this is downcase, is not allowed
+    //Short s1 = Short.valueOf(3); this is downcast, is not allowed
     Short s1 = Short.valueOf("3"); 
     Short s2 = Short.valueOf((short) 3);
 

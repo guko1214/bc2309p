@@ -40,7 +40,7 @@ public class StringDemo {
     int value = 0;
     int charvalue;
     for (char c : characters){
-      charvalue = c; // upcase
+      charvalue = c; // upcast
       //System.out.println(charvalue);
       value += c;
     }
