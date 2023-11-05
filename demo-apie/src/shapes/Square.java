@@ -18,6 +18,22 @@ public class Square extends Shape {
         this.length = length;
     }
 
+    public static Square of(double length) {
+        return new Square(length, Color.WHITE);
+    }
+
+    public static Square of (Color color) {
+        return new Square(1.0d, color);
+    }
+
+    public static Square of() {
+        return new Square(1.0d, Color.WHITE);
+    }
+
+    public static Square of(double length, Color color) {
+        return new Square(length, color);
+    }
+
     public void setLength(double length) {
         this.length = length;
     }

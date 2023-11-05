@@ -63,7 +63,7 @@ public class Circle extends Shape {
       return false;
     Circle circle = (Circle) obj;
     // return Objects.equals(this.radius, circle.radius);
-    return Objects.equals(this.radius, circle.radius) ;
+    return Objects.equals(this.radius, circle.radius);
   }
 
   @Override
@@ -131,7 +131,6 @@ public class Circle extends Shape {
     String str = String.valueOf(1); // "1"
     String str2 = String.valueOf('1'); // "1"
     String str3 = String.valueOf(true); // "true"
-
 
   }
 

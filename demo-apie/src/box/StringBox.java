@@ -1,12 +1,8 @@
 package box;
 
-public class StringBox {
+public class StringBox implements CharSequence {
   
   private char[] arr; // encapsulation of a char array, cannot access from outside
-
-  public static StringBox valueOf(String s) {
-    return new StringBox(s);
-  }
 
   private StringBox(String s) {
     this.arr = new char[s.length()];
@@ -15,16 +11,40 @@ public class StringBox {
     }
   }
 
-  // public StringBox(char[] arr) {
-  //   this.arr = arr;
-  // }
+  private StringBox(char[] arr) {
+    this.arr = arr;
+  }
 
+  public static StringBox valueOf(String s) {
+    return new StringBox(s);
+  } 
+
+  public static void check() {
+    System.out.println("check");
+  }
+
+  @Override
   public int length() {
     return this.arr.length;
   }
-  
+
+  @Override  
   public char charAt(int index) {
     return this.arr[index];
+  }
+
+  @Override
+  public CharSequence subSequence(int start, int end) {
+    //
+    if (start == end)
+      return "";
+    if (end < start)
+      return new StringBox(this.arr); 
+    char[] newArr = new char[end - start];
+    for (int i = start; i < end; i++) {
+      newArr[i - start] = this.arr[i];
+    }
+    return new StringBox(newArr);
   }
 
   public StringBox substring(int fromIndex, int toIndex) {
@@ -81,6 +101,23 @@ public class StringBox {
     System.out.println(stringbox4); // ll
     stringbox4.append("!!!!!"); // alter the original object
     System.out.println(stringbox4); // ll!!!!!
+
+
+    // System.out.println("hello".substring(3,2));
+    System.out.println(stringBox.subSequence(1,3));
+
+    CharSequence str = "hello world"; // String implements CharSequece interface in Java, so CharSequence can declared with String
+    str = new StringBox("c"); // Your design class "StringBox" implements CharSequence interface, so CharSequence can assign to StringBox
+    System.out.println(str.length()); // 11
+    System.out.println(str.toString()); // hello world
+
+    String str2 = "abcd";
+    System.out.println(str2.length()); // 4
+    System.out.println(str2.toString()); // abcd 
+    
+    // if you call static with object, it will call the parent class static method but not child class static method
+
   }
+
 
 }

@@ -50,7 +50,8 @@ public abstract class Shape {
       if (shape != null) {
         // shape.area -> Polymorphism
         //totalArea.add(BigDecimal.valueOf(shape.area(mode, dp))); // it not work, totalArea will remain zero.        
-        totalArea = totalArea.add(BigDecimal.valueOf(shape.area(mode, dp))); // BigDecimal return new object after calculation, rounding,....(i.e. any operation)        
+        totalArea = totalArea
+                .add(BigDecimal.valueOf(shape.area(mode, dp))); // BigDecimal return new object after calculation, rounding,....(i.e. any operation)        
       }
     }
     return totalArea.doubleValue(); // 178.53
@@ -80,7 +81,9 @@ public abstract class Shape {
 
     System.out.println(Shape.totalArea(shapes, RoundingMode.HALF_UP, 2));
     
-
+    Shape s2 = Circle.of(5.0, Color.WHITE);
+    Shape s3 = Square.of(3.0d, Color.BLACK);
    }
+   
 
 }
