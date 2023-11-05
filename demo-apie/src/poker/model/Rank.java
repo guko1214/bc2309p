@@ -1,4 +1,4 @@
-package poker;
+package model;
 
 public enum Rank {
   
@@ -18,7 +18,6 @@ public enum Rank {
   // KING,
 
   RA,
-  R1,
   R2,
   R3,
   R4,
