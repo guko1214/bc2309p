@@ -1,4 +1,4 @@
-package poker.model;
+package poker2.model;
 
 public class Card {
   

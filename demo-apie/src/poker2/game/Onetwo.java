@@ -1,8 +1,8 @@
-package poker.game;
+package poker2.game;
 
 import java.util.Random;
-import poker.model.Deck;
-import poker.model.Card;
+import poker2.model.Deck;
+import poker2.model.Card;
 
 public class Onetwo extends Game {
 

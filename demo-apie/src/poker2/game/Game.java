@@ -1,7 +1,7 @@
-package poker.game;
+package poker2.game;
 
-import poker.model.Card;
-import poker.model.Deck;
+import poker2.model.Card;
+import poker2.model.Deck;
 
 public abstract class Game {
     

@@ -1,5 +1,5 @@
-package poker.game;
-import poker.model.Card;
+package poker2.game;
+import poker2.model.Card;
 
 public class Player {
     
@@ -64,5 +64,4 @@ public class Player {
     public static Player of(String name) {
         return new Player(name);
     }
-
 }
