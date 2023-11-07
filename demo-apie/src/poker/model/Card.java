@@ -40,6 +40,10 @@ public class Card {
     return this.rank;
   }
 
+  public String toString() {
+    return "Card(suit=" + this.suit + ", rank=" + this.rank + ")";
+  }
+
 }
 
 // public enum Card{
