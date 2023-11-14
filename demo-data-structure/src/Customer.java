@@ -5,7 +5,7 @@ public class Customer {
   
   private String name;
 
-  private ArrayList<Order> orders;
+  private ArrayList<Order> orders; // Order[]
 
   public Customer(String name) {
     this.name = name;
