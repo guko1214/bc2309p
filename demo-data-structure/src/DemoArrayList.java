@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class DemoArrayList {
   
@@ -91,9 +92,10 @@ public class DemoArrayList {
     integers2.add(2200);
 
     // addAll()
+    System.out.println("addAll");
     integers2.addAll(integers); // add another ArrayList to another ArrayList
-    System.out.println(integers2); // [1000, 2200]
-    System.out.println(integers); // [1000, 2200, 3 , null]
+    System.out.println(integers); // [1000, 2200]
+    System.out.println(integers2); // [1000, 2200, 3 , null]
 
     // indexOf, find the first
     System.out.println(integers2.indexOf(1000)); // 0
@@ -134,6 +136,23 @@ public class DemoArrayList {
     System.out.println(Arrays.toString(arr2));
     System.out.println(Arrays.toString(result));
 
+    // List
+    ArrayList<String> string3 = new ArrayList<>();
+    List<String> string4 = new ArrayList<>();
+
+    string3.add("hello");
+    string4.add("hello");
+    
+    string3.remove("hello");
+    string4.remove("hello");
+
+    System.out.println("string3=" + string3);
+    System.out.println("string4=" + string4);
+
+    // ArrayList.class implementing Interface List
+    // So, the method in List must be inplemented by ArrayList, 
+    // but, some method in ArrayList may not in List
+        
   }
 
 }
