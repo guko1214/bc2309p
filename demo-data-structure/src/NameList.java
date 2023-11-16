@@ -84,23 +84,33 @@ public class NameList {
     // if not found, return null
     NameList oldHead = this;
     NameList head = this;
-    System.out.println(this.id);
+    if (this.id == null & this.getNext() == null)
+      return null;
     if (this.id.equals(id)) {
+      if (this.getNext() != null) {
       this.id = this.getNext().id;
-      oldHead.next = head.getNext().next;
+      this.next = head.getNext().next;
+      } else {
+        this.id = null;
+      }
       return id;
     }
-    while (!(head.id.equals(id))) {
+    // while (head.getNext() != null && !(head.id.equals(id))) {
+    //   oldHead = head;
+    //   head = head.getNext();
+    // }
+    // if (head.id == id) {
+    //   oldHead.next = head.next;
+    //   return id;
+    // }
+    do {
+      if (head.id == id) {
+        oldHead.next = head.next;
+        return id;
+      }
       oldHead = head;
       head = head.getNext();
-    }
-    //System.out.println("head id=" + head.id);
-    System.out.println("oldhead=" + oldHead.id);
-    System.out.println("head=" + head.id);
-    if (head.id == id) {
-      oldHead.next = head.next;
-      return id;
-    }
+    } while ((head != null));// && !(head.id.equals(id))))
     return null;    
   }
     
@@ -159,9 +169,10 @@ public class NameList {
     }
     System.out.println("=============================");
     //System.out.println(nl.getNext().getId());
-    //nl.remove("ABC");
+    // nl.remove("ABC");
     nl.remove("DEF");
-    nl.remove("XYZ");
+    // nl.remove("XYZ");
+    // nl.remove("dwewt");
     System.out.println("=======");
     head2 = nl;
     System.out.println(head2.getId());
