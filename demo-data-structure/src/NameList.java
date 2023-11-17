@@ -1,6 +1,8 @@
 // Design a Class (Node), link up another Node object 
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 public class NameList {
   
@@ -118,6 +120,17 @@ public class NameList {
     return this.id;
   }
 
+  @Override
+  public String toString(){
+    StringBuilder namelist = new StringBuilder();
+    NameList head = this;
+    for (int i = 0; i < this.size(); i++) {
+      namelist = namelist.append(this.id + " -> ");
+      head = head.getNext();
+    }
+    return namelist.toString();
+  }
+
   public static void main(String[] args) {
     NameList node1 = new NameList("John"); // node1 -> node2
     System.out.println("node1 ref=" + node1);
@@ -162,6 +175,9 @@ public class NameList {
     nl2.add("DEF");
     nl2.add("XYZ");
 
+    // nl.add("detdee");
+    // nl.add("dwewt");
+
     NameList head2 = nl;
     while (head2.getNext() != null) {
       head2 = head2.getNext();
@@ -171,15 +187,42 @@ public class NameList {
     //System.out.println(nl.getNext().getId());
     // nl.remove("ABC");
     nl.remove("DEF");
-    // nl.remove("XYZ");
-    // nl.remove("dwewt");
+    nl.remove("XYZ");
+    nl.remove("dwewt");
+    
     System.out.println("=======");
     head2 = nl;
-    System.out.println(head2.getId());
-    while (head2.getNext() != null) {
-      head2 = head2.getNext();
-      System.out.println(head2.getId());
-    }
+    // System.out.println(head2.getId());
+    // while (head2.getNext() != null) {
+    //   head2 = head2.getNext();
+    //   System.out.println(head2.getId());
+    // }
+    System.out.println(nl.toString());
+      
+    // Compare to LinkedList
+    LinkedList<String> nl3 = new LinkedList<>();
+
+    nl3.add("ABC");
+    nl3.add("DEF");
+    nl3.add("XYZ");
+    System.out.println("size=" + nl3.size()); // 3
+    nl3.get(nl3.size() - 1); // no array in nl3, searching require loop through the 
+
+    ArrayList<String> nl4 = new ArrayList<>();
+    nl4.add("ABC");
+    nl4.add("DEF");
+    nl4.add("XYZ");
+    System.out.println("size=" + nl4.size()); // 3
+    nl4.get(nl3.size() - 1); // arr[arr.length-1] // is array, seraching not require loop
+
+    List<String> nl5 = new ArrayList<>();
+    nl5 = new LinkedList<>();
+    // Compile time in Java: List<String> determine which methods can be invoked
+    // Run time in Java: nl5 will know which object it points to. ArrayList or LinkedList object?
+    nl5.add("ABC");
+    nl5.remove(0);
+
+    System.out.println(nl5.size()); // 0
 
   }
   
