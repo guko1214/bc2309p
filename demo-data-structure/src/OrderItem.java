@@ -27,6 +27,11 @@ public class OrderItem {
     return this.unitPrice;
   }
 
+  @Override
+  public String toString() {
+    return "OrderItem(quantity=" + this.quantity + ", unitPrice=" + this.unitPrice + ")";
+  }
+
   public BigDecimal total() {
     return BigDecimal.valueOf(this.quantity) // 
       .multiply(BigDecimal.valueOf(this.unitPrice)); //

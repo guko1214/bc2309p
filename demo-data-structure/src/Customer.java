@@ -16,6 +16,11 @@ public class Customer {
     return this.name;
   }
   
+  @Override
+  public String toString() {
+    return "Customer(name=" + this.name + ", orders=" + this.orders + ")";
+  }
+
   public boolean add(Order order) {
     return this.orders.add(order);
   }
