@@ -1,9 +1,12 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 public class DemoArrayLinkedList {
   
   public static void main(String[] args) {
+
+    
     //long start = System.currentTimeMillis();
     long start = System.nanoTime();
     System.out.println(start); //
@@ -17,7 +20,9 @@ public class DemoArrayLinkedList {
 
     // ArrayList add 10,000,000
     start = System.nanoTime();
-    ArrayList<String> integers = new ArrayList<>();
+    // usually use the referenc type in the left, to restrict functions the objects can use
+    // use List to declare ArrayList
+    List<String> integers = new ArrayList<>(); 
     for (int i = 0; i < 10000000; i++) {
       //integers.add(i);
       integers.add(String.valueOf(i));
@@ -27,7 +32,7 @@ public class DemoArrayLinkedList {
 
     // LinkedList add 10,000,000
     start = System.nanoTime();
-    LinkedList<String> integers2 = new LinkedList<>();
+    List<String> integers2 = new LinkedList<>();
     for (int i = 0; i < 10000000; i++) {
       //integers2.add(i);
       integers2.add(String.valueOf(i));

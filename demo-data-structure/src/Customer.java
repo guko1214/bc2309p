@@ -36,10 +36,11 @@ public class Customer {
   }
 
   @Override
-  public int hashCode() {
-    //return Objects.hash(this.name) + Objects.hash(this.orders);
+  public int hashCode() {    
     System.out.println(Objects.hash(this.name) + Objects.hash(this.orders));
-    return Objects.hash(this.name);
+    //System.out.println(Objects.hash(this.name));
+    return Objects.hash(this.name) + Objects.hash(this.orders);
+    //return Objects.hash(this.name);
   }
 
 

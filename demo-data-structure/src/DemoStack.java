@@ -11,7 +11,7 @@ public class DemoStack {
     queue.add("ABC");
     queue.add("IJK");
 
-    Stack<String> stack = new Stack<>();
+    Stack<String> stack = new Stack<>(); 
     System.out.println(stack.push("Hello")); // Hello
     stack.push("World");
     stack.push("!!!");
