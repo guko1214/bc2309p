@@ -25,7 +25,7 @@ public class Order {
 
   @Override
   public String toString() {
-    return "Order(orderNo=" + this.orderNo + "orderItems=" + this.orderItems + ")";
+    return "Order(orderNo=" + this.orderNo + ", orderItems=" + this.orderItems + ")";
   }
 
   public boolean add(OrderItem orderItem) {
