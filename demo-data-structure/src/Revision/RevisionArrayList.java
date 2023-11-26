@@ -63,16 +63,23 @@ public class RevisionArrayList {
 
     // Add all the books to set collection (HashSet)
     Set<Book> bookSet = new HashSet<>();
+    // approach 1
     for (Book b: books) {
       bookSet.add(b);
     }
-    System.out.println(bookSet);
+    System.out.println("HashSet approach 1 " + bookSet);
+    // approach 2
+    bookSet.clear(); // clear() remove the object reference
+    bookSet.addAll(books);
+    System.out.println("HashSet approach 2 " + bookSet);
 
     // Add all the books to an Array(Book[])
     Book[] bookArray = new Book[books.size()];
-    int idx = 0;
-    for (Book b: books) {
-      bookArray[idx++] = b;
+    //int idx = 0;
+    //for (Book b: books) {
+    for (int i = 0; i < books.size(); i++) {
+      //bookArray[idx++] = b;
+      bookArray[i] = books.get(i);
     }
     System.out.println(Arrays.toString(bookArray));
   //  System.out.println(books2);
