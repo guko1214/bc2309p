@@ -47,7 +47,7 @@ public class App {
     System.out.println(i16 > 7); // true 
     System.out.println(i16.compareTo(8)); // 0
     System.out.println(i16.compareTo(9)); // -1, less than 9
-    System.out.println(i16.compareTo(7)); // -1, larger than 7
+    System.out.println(i16.compareTo(7)); // 1, larger than 7
 
 
   }
