@@ -52,14 +52,14 @@ public class JavaQuest14 {
     // if (num < 0)
     //   checkString = "-" + checkString;  
     // for (int i = 0; i < checkString.length()/2; i++) {
-    //   if (checkString.charAt(i ) != checkString.charAt(checkString.length() - 1))
+    //   if (checkString.charAt(i ) != checkString.charAt(checkString.length() - 1 - i))
     //     return false;
     // }      
     // return true;
     // method 2
     String check = "" + num;
     for (int i = 0; i < check.length()/2; i++) {
-      if (check.charAt(i ) != check.charAt(check.length() - 1))
+      if (check.charAt(i ) != check.charAt(check.length() - 1 - i))
         return false;
     }
     return true;
