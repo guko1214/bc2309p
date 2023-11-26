@@ -40,5 +40,4 @@ public class DemoPQ {
       System.out.println(pq3.poll());
     }
   }
-
 }
