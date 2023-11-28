@@ -2,6 +2,7 @@ public class Examples {
  
   // when x = 5, return 5 + 4 + 3 + 2 + 1 = 15
   public static int sum(int x) {
+    // base criteria, end when satisfied
     if (x == 1)
       return 1;
     return x + sum(x - 1); 
