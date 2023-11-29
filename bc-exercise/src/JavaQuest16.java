@@ -37,19 +37,42 @@ public class JavaQuest16 {
   public static int[] sumToZero(int i) {
     int[] integers = new int[i];
     Random random = new Random();
+    //int intPositiveLimit = 2147483647;
+    //int intNegativeLimit = -2147483648;
+    int intPositiveLimit = 9;
+    int intNegativeLimit = -9;
     int tempSum = 0;
-    for (int j = 0; j < i - 1; j++) {
+    int sum = 0;    
+    boolean unique = true;
+    //for (int j = 0; j < i - 1; j++) {
+    for (int j = 0; j < 1; j++) {
         integers[j] = random.nextInt(18) - 9;
         tempSum += integers[j];
+        sum = tempSum;
+    }    
+    int k = 1;
+    while (k < i - 1) {
+      tempSum = sum;
+      integers[k] = random.nextInt(18) - 9;
+      tempSum = tempSum + integers[k];
+      unique = true;
+      for (int l = 0; l <= k; l++) {
+        if (integers[l] == integers[k]) {
+          unique = false;
+        }
+      }
+      if (unique = true) {
+        if (tempSum <= intPositiveLimit && tempSum >= intNegativeLimit) {
+        sum = tempSum;
+        k++;
+      }
+      }
     }
-    int sum = 0;
-    do {
-        integers[i - 1] = random.nextInt(18) - 9;
-        sum = tempSum + integers[i - 1];
-        //boolean check = sum==0;
-        System.out.println("sum="+ sum);
-        
-    } while (sum != 0);
+    while (k < i && tempSum != 0) {
+      tempSum = sum;
+      integers[k] = random.nextInt(18) - 9;
+      tempSum = tempSum + integers[k];      
+    }
     System.out.println(Arrays.toString(integers));
     
     return integers;
