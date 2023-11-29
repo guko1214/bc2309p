@@ -50,31 +50,48 @@ public class JavaQuest16 {
         tempSum += integers[j];
         sum = tempSum;
     }    
+
     int k = 1;
+
     while (k < i - 1) {
+      
       tempSum = sum;
       integers[k] = random.nextInt(18) - 9;
       tempSum = tempSum + integers[k];
-      unique = true;
-      for (int l = 0; l <= k; l++) {
-        if (integers[l] == integers[k]) {
-          unique = false;
-        }
-      }
-      if (unique = true) {
+      // for (int l = 0; l <= k; l++) {
+      //   if (integers[l] == integers[k]) {
+      //     unique = false;
+      //   }
+      // }
+      //System.out.println(isUnique(integers,k,integers[k]) == true);
+      if (isUnique(integers,k,integers[k]) == true) {
         if (tempSum <= intPositiveLimit && tempSum >= intNegativeLimit) {
         sum = tempSum;
         k++;
+        }
       }
-      }
-    }
+    }    
+    //System.out.println(unique);
+    if (sum == 0)
+      return integers;
     while (k < i && tempSum != 0) {
+      //unique = true;
       tempSum = sum;
       integers[k] = random.nextInt(18) - 9;
-      tempSum = tempSum + integers[k];      
+      if (isUnique(integers,k,integers[k]) == true)
+        tempSum = tempSum + integers[k];      
     }
     System.out.println(Arrays.toString(integers));
     
     return integers;
   }
+
+  public static boolean isUnique(int[] arr,int k, int j) {
+    for (int i = 0; i < k; i++) {
+      if (arr[i] == j)
+        return false;
+    }
+    return true;
+  }
+
 }
