@@ -2,6 +2,7 @@ package Shape;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public abstract class Shape {
@@ -14,6 +15,14 @@ public abstract class Shape {
   public static <T extends Shape> double totalArea(List<T> shapes) { 
     BigDecimal totalArea = BigDecimal.valueOf(0d);
     for (T shape : shapes) {
+      totalArea = totalArea.add(BigDecimal.valueOf(shape.area()));
+    }
+    return totalArea.doubleValue();
+  }
+
+  public static double totalArea2(List<? extends Shape> shapes) { 
+    BigDecimal totalArea = BigDecimal.valueOf(0d);
+    for (Shape shape : shapes) {
       totalArea = totalArea.add(BigDecimal.valueOf(shape.area()));
     }
     return totalArea.doubleValue();

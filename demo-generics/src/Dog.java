@@ -1,11 +1,33 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-
-public class Dog extends Animal {
+public class Dog extends Animal implements Comparable<Animal> {
   
   private int age;
 
+  public Dog() {
+    // super()
+  }
+
+  public Dog(String name, int age) {
+    super(name);
+    this.age = age;
+
+  }
+
+  @Override
+  public String toString() {
+    return "Dog(age=)" + this.age + ", name=" + super.getName() + ")";
+  }
+
   public static <T extends Animal> void makeSound(Printer<T> animals) {
 
+  }
+
+  @Override 
+  public int compareTo(Animal animal) {
+    return animal.getName().compareTo(super.getName());
   }
 
   // public static void makeSound(Printer<Animal> animals) {
@@ -29,6 +51,14 @@ public class Dog extends Animal {
     // public static <T extends Animal> void makeSound restrict the T must be child class of Animal or Animal itself
     // The T in StringPrinter is String which is not child class of Animal or Animal, so compile error
     // makeSound(stringPrinter); // not OK, complie error
+
+    List<Dog> dogs = new ArrayList<>(List.of(new Dog("CBA",20), new Dog("ABC",10),new Dog("CBA",20)));
+
+    
+    Collections.sort(dogs);
+
+    System.out.println(dogs);
+
   }
 
 }

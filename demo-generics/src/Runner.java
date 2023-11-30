@@ -24,7 +24,7 @@ public class Runner<T extends Animal> {
   public static void main(String[] args) {
     
     Runner<Dog> dogRunner = new Runner<>(new Dog());
-  Runner<Dog> dogRunner2 = new Runner<>();
+    Runner<Dog> dogRunner2 = new Runner<>();
 
   // Runner<Person> personRunner = new Runner<>(new Person()); // not allowed since Person is not Animal of child class of Animal
 

@@ -26,7 +26,8 @@ public class Printer<T> { //<U><V>
     Printer<String> stringPrinter = new Printer<>();
     Printer<Integer> integerPrinter = new Printer<>();
     Printer<Double> doublePrinter = new Printer<>();
-   
+    Printer<Long> LongPrinter = new Printer<>(Long.valueOf(2));
+
     // before Java 1.5
     // more than one class can add into the list
     List objects = new ArrayList();
