@@ -12,7 +12,7 @@ public class DemoUnCheckedException {
     // 2. NullPointerException
 
     // Checked Exception:
-    sum(2, -1);
+    //sum(2, -1);
 
     int result2;
     try {
