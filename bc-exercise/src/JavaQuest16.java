@@ -24,14 +24,15 @@ public class JavaQuest16 {
 
   // Do not change anything in main method
   public static void main(String[] args) {
-    int[] nums = sumToZero(5); // n = 5
-    int[] nums1 = sumToZero(3); // n = 3
-    int[] nums2 = sumToZero(2); // n = 2
-    int[] nums3 = sumToZero(1); // n = 1
+    // int[] nums = sumToZero(5); // n = 5
+    // int[] nums1 = sumToZero(3); // n = 3
+    // int[] nums2 = sumToZero(2); // n = 2
+    // int[] nums3 = sumToZero(1); // n = 1
 
     int[] nums4 = sumToZero(5);
     do  {
       nums4 = sumToZero(5);
+      System.out.println(nums4);
     } while (nums4[4] != 0);
   }
 
