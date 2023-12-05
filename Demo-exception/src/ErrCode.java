@@ -18,11 +18,11 @@ public enum ErrCode {
     this.errMsg = errMsg;
   }
 
-  public String errMsg() {
+  public String getErrMsg() {
     return this.errMsg;
   }
 
-  public int code() {
+  public int getCode() {
     return this.code;
   }
 

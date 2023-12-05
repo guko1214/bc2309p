@@ -17,8 +17,8 @@ public class BusinessException extends Exception { // Checked Exception
   //}
   public BusinessException(ErrCode errCode) {
     // super(message);
-    super(errCode.errMsg());
-    this.code = errCode.code();
+    super(errCode.getErrMsg());
+    this.code = errCode.getCode();
   }
 
   public int getCode() {
@@ -31,7 +31,7 @@ public class BusinessException extends Exception { // Checked Exception
 
   public static void main(String[] args) {
     //BusinessException bussEx = new BusinessException("checking",87);
-    System.out.println(ErrCode.NAME_TOO_LONG_EXCEPTION.errMsg());
+    System.out.println(ErrCode.NAME_TOO_LONG_EXCEPTION.getErrMsg());
     // enum can be view as class design in complie time
     BusinessException bussEx = new BusinessException(ErrCode.NAME_TOO_LONG_EXCEPTION); 
     System.out.println(bussEx.getMessage());
