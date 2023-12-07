@@ -6,7 +6,7 @@ public class DemoArrayIndex {
 
   }
 
-    public static void arrayIndexOutoutofBound(int[] arr) {
+    public static void arrayIndexOutofBound(int[] arr) {
       arr[arr.length] = 1;
     }  
 

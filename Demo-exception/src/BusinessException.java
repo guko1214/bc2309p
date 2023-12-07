@@ -2,9 +2,9 @@ public class BusinessException extends Exception { // Checked Exception
   
   private int code;
 
-  public BusinessException() {
-    super();
-  }
+  // public BusinessException() {
+  //   super();
+  // }
 
   // public BusinessException(String message) {
   //   super(message);
@@ -15,7 +15,7 @@ public class BusinessException extends Exception { // Checked Exception
     // this.message = message;
     // this.code = code;
   //}
-  public BusinessException(ErrCode errCode) {
+  public BusinessException(ErrCode errCode) { // use enums to restrict message available to use
     // super(message);
     super(errCode.getErrMsg());
     this.code = errCode.getCode();
@@ -25,9 +25,15 @@ public class BusinessException extends Exception { // Checked Exception
     return this.code;
   }
 
+
   public String getMessage() {
     return super.getMessage();
   }
+
+  public String getFullMessage() {
+    return String.valueOf(this.code).concat("-").concat(super.getMessage());
+  }
+
 
   public static void main(String[] args) {
     //BusinessException bussEx = new BusinessException("checking",87);

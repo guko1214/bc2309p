@@ -47,18 +47,20 @@ public class DemoUnCheckedException {
       
     // Example 1:
     System.out.println(divide(9,3));
-    System.out.println(divide(9,0));
+    //System.out.println(divide(9,0));
     
     try {
       // Since divided3 would throw a check exception ,
       // so the method caller has to handle the method call by try catch
-      result = divide3(9,3);
-    } catch (BusineseException e) {
+      // result = divide3(9,3);
+      result = divide3(9,0);
+    } catch (BusinessException e) {
+      System.out.println(e.getFullMessage());
       result = -1;
     }
 
     // Example 2
-    System.out.println(arrayIndexOutOfBound(new int[10]));
+   // System.out.println(arrayIndexOutofBound(new int[10]));
 
   }
 
@@ -92,12 +94,12 @@ public class DemoUnCheckedException {
 
 
   // The method signature need to add "throws exception" if the logic throw checked exception
-  public static int divide3(int x, int y) throws BusineseException {
+  public static int divide3(int x, int y) throws BusinessException {
     int result;
     try {
       result  = x / y;
     } catch (ArithmeticException e) { // Convert uncheck exception to checked exception
-      throw new BusineseException();
+      throw new BusinessException(ErrCode.ARITHMETERIC_EXCEPTION);
     }
     return result;
   }
