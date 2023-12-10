@@ -29,8 +29,18 @@ public class JavaQuest22 {
 
   public static int findDifferent(int n) {
     // code here
-    // int productDigit = 0;
-    // int sumDigit = 0;
-    // for (int i = 0; i < )
+    int productDigit = 1;
+    int sumDigit = 0;
+    String number = String.valueOf(n);
+    String c = "";
+    int digit = 0;
+    for (int i = 0; i < number.length(); i++) {
+      c = String.valueOf(number.charAt(i));
+      digit = Integer.valueOf(c);
+      //System.out.println("c=" + c + ", digit=" + digit);
+      productDigit = productDigit * digit;
+      sumDigit += digit;
+    }
+    return productDigit - sumDigit;
   }
 }

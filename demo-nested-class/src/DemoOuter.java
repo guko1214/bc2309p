@@ -13,7 +13,7 @@ public class DemoOuter {
     //Company.Employee employee = new Company.Employee("John", 123); // -> static?
     Company.Employee employee = Company.createEmployee("John", 123);
 
-    // Employee employee2 = new Employee();
+    Employee employee2 = new Employee();
 
     //Outer.InnerClass inner = new Outer("DEF").new InnerClass("IJK");
     Outer outer2 = new Outer("DEF");
