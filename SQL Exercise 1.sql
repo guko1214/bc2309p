@@ -199,9 +199,16 @@ where jh.job_id = j.job_id
 and jh.department_id = 30;
 
 -- 10. Write a query to display all departmemt name, manager name, city and country name
-
+select d.department_name, concat(e.first_name, ' ', e.last_name) as 'manager name', l.city, c.country_name
+from employees e
+inner join departments d on e.employee_id = d.manager_id
+inner join locations l on d.location_id = l.location_id
+inner join countries c on l.country_id = c.country_id;
 
 -- 11. Write a query to display the average salary of each department
+select d.department_name, avg(e.salary) as 'average salary'
+from employees e, departments d
+group by d.department_name
 
 -- 12. Now, we try to perform normalization on table 'jobs'.
 
