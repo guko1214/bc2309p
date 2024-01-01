@@ -25,7 +25,7 @@ insert into students (student_id, first_name, last_name, birth_date, gpa, is_act
 	values(3,'Mary','Lee','2001-09-07',3.76,true);
     
 insert into students (student_id, first_name, last_name, birth_date, gpa, is_active)
-	values(3,'Tommu','Chan','2001-09-07',3.76,true);
+	values(4,'Tommu','Chan','2001-09-07',3.76,true);
 
 insert into students (student_id, first_name, birth_date, gpa, is_active)
 	values(5,'Sally','2000-07-07',3.76,true);
