@@ -65,7 +65,7 @@ select 1 from students2; -- 3
 select count(1) from students2; -- 3
 select 10 from students2 where gpa >= 2.0; -- return 3 rows (with a column value 10)
 select count(10) from students2 where gpa > 3.0; -- 1
-select count(10) from students2 where gpa > 2.0; -- 3
+select count(10) from students2 where gpa > 2.0; -- 1
 
 -- alter table add
 alter table students2 add column JOIN_DATE date;
