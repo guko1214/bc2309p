@@ -208,6 +208,7 @@ inner join countries c on l.country_id = c.country_id;
 -- 11. Write a query to display the average salary of each department
 select d.department_name, avg(e.salary) as 'average salary'
 from employees e, departments d
+where e.department_id = d.department_id
 group by d.department_name
 
 -- 12. Now, we try to perform normalization on table 'jobs'.
