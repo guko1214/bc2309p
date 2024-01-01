@@ -379,13 +379,58 @@ where o.id = i.order_id) as order_item_table
 on c.id = order_item_table.customer_id;
 
 -- Approach 3: Common Table Expression (CTE) - Recommended approach
-With 
+With
 	order_item_table as (select o.id as order_id, o.customer_id, o.delivery_address, o.order_amount 
 						 from order1 o, item1 i
-                         where o.id = i.order_id),
-	customer2 as (select * 
-					from customer1
-					)
+                         where o.id = i.order_id)
 
 select c.*, oi.*
 from customer1 c left join order_item_table oi on c.id = oi.customer_id;
+
+
+create database bootcamp_exercise1;
+use bootcamp_exercise1;
+
+--  Find the name of the customers, who has orders
+select *
+from customer1 c
+where exists (select 1 from order1 d where d.customer_id = c.id);
+
+select *
+from customer1 c
+where not exists (select 1 from order1 d where d.customer_id = c.id);
+
+-- Find then name of the customer(s), who has 3 or above orders
+insert into order1(id, order_date, delivery_address, order_amount, customer_id)     
+    values(5, now(),'888888',1000.2 ,2);
+select c.c_name, c.id
+from customer1 c
+-- where exists (select count(1) from order1 d where d.customer_id = c.id group by d.customer_id having count(1) >= 3);
+where exists (select count(1) from order1 d where d.customer_id = c.id having count(1) >= 3);
+
+select c.c_name, count(1) as no_of_orders
+from customer1 c left join order1 o on c.id = o.customer_id
+group by c.id, c.c_name
+having count(1) >= 3;
+
+with 
+	order_counts as (select o.customer_id, count(1) as no_of_orders
+					 from order1 o
+					 group by o.customer_id),
+                     
+	order_item as (select *
+					from item1 i
+					)
+select c.c_name
+from customer1 c
+where exists (select 1 from order_counts oc where oc.customer_id = c.id and oc.no_of_orders >= 3)
+;
+
+
+CREATE VIEW customr_details
+as
+select c.id, concat(c_name, ' ', email) as c_info
+from customer1 c;
+
+select * from customr_details; -- cannot insert, update delete on a view
+-- so, when we insert, update, delete on customer1, the result should reflect in the view as well.
