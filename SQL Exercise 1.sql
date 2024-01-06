@@ -214,3 +214,6 @@ group by d.department_name
 -- 12. Now, we try to perform normalization on table 'jobs'.
 
 -- a. How do you re-design the table 'jobs'? and adding table 'job_grades'?
+
+-- Remove min_salary and max_salary from 'jobs'
+-- add grade_level to 'jobs' as foreign key reference to 'job_grades'

@@ -434,3 +434,9 @@ from customer1 c;
 
 select * from customr_details; -- cannot insert, update delete on a view
 -- so, when we insert, update, delete on customer1, the result should reflect in the view as well.
+
+-- update customer_details set 
+
+
+select * from customr_details; -- cannot insert, update delete on a view
+-- so, when we insert, update, delete on customer1, the result should reflect in the view as well.
