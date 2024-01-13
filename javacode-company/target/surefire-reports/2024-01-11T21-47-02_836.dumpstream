@@ -1,0 +1,12 @@
+# Created at 2024-01-11T21:47:04.326
+1月 11, 2024 9:47:04 下午 org.junit.jupiter.engine.descriptor.DisplayNameUtils determineDisplayName
+
+# Created at 2024-01-11T21:47:04.326
+警告: Configuration error: @DisplayName on [public void com.bootcamp.javacode.CalculatorsTests.testBoolean()] must be declared with a non-empty value.
+
+# Created at 2024-01-11T21:47:04.567
+1月 11, 2024 9:47:04 下午 org.junit.jupiter.engine.descriptor.DisplayNameUtils determineDisplayName
+
+# Created at 2024-01-11T21:47:04.569
+警告: Configuration error: @DisplayName on [public void com.bootcamp.javacode.CalculatorsTests.testBoolean()] must be declared with a non-empty value.
+

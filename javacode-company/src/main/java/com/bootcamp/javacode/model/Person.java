@@ -30,4 +30,8 @@ public class Person {
     return this.name;
   }
 
+  public static String concat(String str) {
+    return "hello" + str;
+  }
+
 }

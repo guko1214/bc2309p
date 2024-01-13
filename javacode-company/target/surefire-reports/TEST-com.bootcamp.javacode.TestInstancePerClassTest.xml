@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.bootcamp.javacode.CalculatorsTests" time="1.692" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.bootcamp.javacode.TestInstancePerClassTest" time="0.008" tests="2" errors="0" skipped="0" failures="2">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -57,12 +57,14 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testAdd" classname="com.bootcamp.javacode.CalculatorsTests" time="0.048"/>
-  <testcase name="testThrow" classname="com.bootcamp.javacode.CalculatorsTests" time="1.538"/>
-  <testcase name="testSort" classname="com.bootcamp.javacode.CalculatorsTests" time="0.008"/>
-  <testcase name="combineTestAandTestB" classname="com.bootcamp.javacode.CalculatorsTests" time="0.009"/>
-  <testcase name="testBoolean" classname="com.bootcamp.javacode.CalculatorsTests" time="0.037"/>
-  <testcase name="testA" classname="com.bootcamp.javacode.CalculatorsTests" time="0.001"/>
-  <testcase name="testB" classname="com.bootcamp.javacode.CalculatorsTests" time="0"/>
-  <testcase name="testSampleObject" classname="com.bootcamp.javacode.CalculatorsTests" time="0.006"/>
+  <testcase name="testA" classname="com.bootcamp.javacode.TestInstancePerClassTest" time="0">
+    <failure message="expected: &lt;12&gt; but was: &lt;11&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <12> but was: <11>
+	at com.bootcamp.javacode.TestInstancePerClassTest.testA(TestInstancePerClassTest.java:33)
+]]></failure>
+  </testcase>
+  <testcase name="testB" classname="com.bootcamp.javacode.TestInstancePerClassTest" time="0">
+    <failure message="expected: &lt;11&gt; but was: &lt;12&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <11> but was: <12>
+	at com.bootcamp.javacode.TestInstancePerClassTest.testB(TestInstancePerClassTest.java:40)
+]]></failure>
+  </testcase>
 </testsuite>
