@@ -8,3 +8,4 @@ com\bootcamp\javacode\model\Job.class
 com\bootcamp\javacode\App.class
 com\bootcamp\javacode\model\Staff$StaffBuilder.class
 com\bootcamp\javacode\model\Job$JobBuilder.class
+com\bootcamp\javacode\model\RealCalculator.class

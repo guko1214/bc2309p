@@ -8,10 +8,10 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
+import org.junit.jupiter.api.Order;
 
-
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @TestMethodOrder(OrderAnnotation.class)
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TestInstancePerClassTest {
   
   private int x;
@@ -38,12 +38,6 @@ public class TestInstancePerClassTest {
   public void testB() {
     this.x++;
     assertEquals(11, this.x);
-  }
-
-  public static void main(String[] args) {
-    // TestInstancePerClass t1 =new TestInstancePerClass();
-    // t1.testA();
-    // t1.testB();
   }
 
 

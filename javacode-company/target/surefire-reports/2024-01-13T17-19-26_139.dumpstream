@@ -1,0 +1,15 @@
+# Created at 2024-01-13T17:19:27.145
+1月 13, 2024 5:19:27 下午 org.junit.jupiter.engine.descriptor.DisplayNameUtils determineDisplayName
+
+# Created at 2024-01-13T17:19:27.148
+警告: Configuration error: @DisplayName on [public void com.bootcamp.javacode.CalculatorsTests.testBoolean()] must be declared with a non-empty value.
+
+# Created at 2024-01-13T17:19:27.211
+1月 13, 2024 5:19:27 下午 org.junit.jupiter.engine.descriptor.DisplayNameUtils determineDisplayName
+
+# Created at 2024-01-13T17:19:27.211
+警告: Configuration error: @DisplayName on [public void com.bootcamp.javacode.CalculatorsTests.testBoolean()] must be declared with a non-empty value.
+
+# Created at 2024-01-13T17:19:29.254
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
