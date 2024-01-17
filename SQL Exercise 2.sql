@@ -85,8 +85,10 @@ or b.bonus_date is null
 
 -- Task 6
 Truncate table worker;
--- the data cannot be deleted, because 
+-- Because the column "worker_id" is a foreign key of table bonus,
+-- the data in table worker cannot be deleted as long as the bonus table contain data with the foreign key.
 
 -- Task 7
 drop table worker;
--- the table cannot be deleted, because
+-- Because the column "worker_id" is a foreign key of table bonus,
+-- the table worker cannot be dropped as long as the bonus table contain data with the foreign key.
