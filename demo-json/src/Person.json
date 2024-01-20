@@ -1,0 +1,51 @@
+{
+  "name" : "John Lau",
+  "age" : 40,
+  "weight" : 80.5,
+  "isChild" : false,
+  "test" : "a"
+}
+
+[
+  {
+    "name" : "John Lau",
+    "age" : 40,
+    "weight" : 80.5,
+    "isChild" : false
+  },
+  {
+    "name" : "Sally Lau",
+    "age" : 15,
+    "weight" : 58.5,
+    "isChild" : true
+  }
+
+]
+
+[ ]
+
+[
+  {
+    "name" : "john",
+    "address" : [
+      {
+        "addrLine1" : "Flat B",
+        "addrLine2" : "ABC",
+        "addrLine3" : "TKO"
+      },
+      {
+        "addrLine1" : "Flat B",
+        "addrLine2" : "IJK",
+        "addrLine3" : "DEF"
+      }
+      
+    ]
+  },  {
+    "name" : "Mary",
+    "addresses" : []
+  },  {
+    "name" : "john"
+  },  {
+    "name" : "john"
+  }
+]
