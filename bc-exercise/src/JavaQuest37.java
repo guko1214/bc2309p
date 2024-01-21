@@ -20,6 +20,9 @@
  *  t.length == s.length + 1 ,
  *  s and t consist of lowercase English letters.
  */
+
+import java.util.Arrays;
+
 public class JavaQuest37 {
   public static void main(String[] args) {
     System.out.println(findTheDifference("abcd", "abcde"));// output : "e"
@@ -29,6 +32,23 @@ public class JavaQuest37 {
   }
 
   public static char findTheDifference(String s, String t) {
+    char[] arr = s.toCharArray();
+    char[] arr2 = t.toCharArray();
+    for (int i = 0; i < arr2.length; i++) {
+      if (!inString(arr,arr2[i])) {
+        return arr2[i];
+      }
+    }
+    return ' ';
+  }
+
+  public static boolean inString(char[] arr, char c) {
+    for (char e: arr) {
+      if (c == e) {
+        return true;
+      }
+    }
+    return false;
   }
 
 }
