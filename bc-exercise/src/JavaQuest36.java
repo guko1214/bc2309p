@@ -22,6 +22,8 @@ Constraints:
 nums.length == 2 * n
 -104 <= nums[i] <= 104 */
 
+import java.util.Arrays;
+
 public class JavaQuest36 {
   public static void main(String[] args) {
     System.out.println(arrayPairSum(new int[] { 1, 4, 3, 2 }));// output : 4
@@ -32,5 +34,33 @@ public class JavaQuest36 {
 
   public static int arrayPairSum(int[] nums) {
     // code here
-  }
+    int[] seq = new int[nums.length];
+    int tempIdx = 0;
+    int sum = 0;
+    for (int i = 0; i < nums.length; i++) {
+      tempIdx = 0;
+      for (int j = 0; j < nums.length; j++){
+        if (nums[j] <nums[i]) {
+          ++tempIdx;
+        }
+      }
+      seq[i] = tempIdx; 
+    }
+
+    int[] nums2 = new int[seq.length];
+    for (int l = 0; l < seq.length; l++){
+      nums2[seq[l]] = nums[l];
+    }
+    for (int m = 1; m < nums2.length; m++) {
+      if (nums2[m] == 0 && nums2[m - 1] > 0) {
+        nums2[m] = nums2[m -1];
+      } 
+    }
+
+    for (int k = 0; k < nums2.length; k = k + 2) {
+        sum += nums2[k];
+    }
+    return sum;
+    }
+
 }
