@@ -1,6 +1,7 @@
 package Exercise;
 
 import Exercise2.Apple;
+import Exercise2.Orange;
 
 public class Lemon {
   public static void main(String[] args) {

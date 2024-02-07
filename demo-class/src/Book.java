@@ -1,3 +1,4 @@
+
 public class Book { // A template to describe the objects
   
   // what is instance? means object
@@ -45,6 +46,7 @@ public class Book { // A template to describe the objects
   // static method cannot be associated to the object
   // We use Class name to call static method, i.e. Book.print()
   public static void main(String[] args) {
+    //Book person1 = new Book();
     Person person1 = new Person();
     person1.setAge(8); // instance method
     System.out.println(person1.print1());

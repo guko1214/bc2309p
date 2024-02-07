@@ -38,7 +38,7 @@ public class Subject {
      return 'F';
   }
 
-  private int getscore() {
+  public int getscore() {
     return this.score;
   }
 
@@ -58,7 +58,7 @@ public class Subject {
     // instance method to calculate the average score of the exam
     
       Exam exam = new Exam();
-  
+      int size = Exam.getsize();
       System.out.println("1no of subjects=" + size);
   
       exam.addsubject1("Chi", 53);
@@ -81,7 +81,7 @@ public class Subject {
         }
       }
   
-      System.out.println("no of subjects=" + Exam.size);
+      System.out.println("no of subjects=" + Exam.getsize());
   
       Exam exam2 = new Exam();
       Subject subject7 = new Subject("History", 85);
@@ -89,13 +89,13 @@ public class Subject {
       exam2.addsubject2(subject7);
       exam2.addsubject2(subject8);
   
-      System.out.println("no of subjects=" + Exam.size);
+      System.out.println("no of subjects=" + Exam.getsize());
   
       // private static variable
       // so, we cannot get the static variable
       // only when the the main is not wrote in the same class file
       // if wrote in the same file, the private variable can still be accessed
-      System.out.println("no of subjects=" + getsize());
+      System.out.println("no of subjects=" + Exam.getsize());
       System.out.println("The subject get the highest score is " + exam.highestscoresubject());
       exam.delete(subject2);
   

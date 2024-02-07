@@ -9,6 +9,6 @@ public class ReviewString {
             }
         }
         System.out.println(str);
-        int integer1 = 0.9;
+        int integer1 = 9;
     }
 }

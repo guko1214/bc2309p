@@ -22,3 +22,10 @@ insert into players (player_id, group_id) values
 (45,2),
 (60,2),
 (65,2);
+
+insert into matches (match_id,first_player, second_player, first_score, second_score) values
+(1,20, 45, 10,12),
+(,,,,),
+(,,,,),
+(,,,,),
+(,,,,),
